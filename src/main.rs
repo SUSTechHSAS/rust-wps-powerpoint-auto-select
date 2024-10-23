@@ -2,6 +2,7 @@
 use std::process::{Command};
 use std::env;
 use std::fs;
+use std::path::{Path};
 use yaml_rust2::{YamlLoader};
 use chrono::prelude::*;
 
@@ -15,7 +16,11 @@ fn start() {
     let args: Vec<String> = env::args().collect();
     let file_path = (&args[1]).clone();
 
-    let raw_config = fs::read_to_string("config.yml")
+    let mut config_path = Path::new(&args[0]);
+    config_path = config_path.parent().unwrap();
+    let config_path = config_path.join("config.yml");
+
+    let raw_config = fs::read_to_string(config_path)
         .expect("Can't read file config.yml!");
 
     let config = YamlLoader::load_from_str(raw_config.as_str())
