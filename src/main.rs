@@ -13,6 +13,7 @@ fn main() {
 
 fn start() {
     let args: Vec<String> = env::args().collect();
+    println!("{}", args[0]);
     let file_path = (&args[1]).clone();
 
     let raw_config = fs::read_to_string("config.yml")
