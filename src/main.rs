@@ -1,3 +1,4 @@
+#![windows_subsystem = "windows"]
 use std::process::{Command};
 use std::env;
 use std::fs;
