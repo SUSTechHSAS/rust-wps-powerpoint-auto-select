@@ -4,6 +4,8 @@ use std::fs;
 use yaml_rust2::{YamlLoader};
 use chrono::prelude::*;
 
+// maybe serde_yaml
+
 fn main() {
     start();
 }
@@ -49,7 +51,7 @@ fn start() {
 
             if naive_time >= begin && naive_time <= end {
                 run(&cfg["path"].clone().into_string().unwrap(), &file_path);
-                break;
+                return;
             }
         }
     }
