@@ -51,7 +51,7 @@ fn start() {
 
             if naive_time >= begin && naive_time <= end {
                 run(&cfg["path"].clone().into_string().unwrap(), &file_path);
-                panic!("Ending!");
+                return;
             }
         }
     }
