@@ -1,0 +1,23 @@
+-
+  path: "notepad"
+  default: true
+
+-
+  path: "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE"
+  time:
+    -
+      Mon:
+        - "09:00:00"
+        - "10:00:00"
+      Tue:
+        - "10:30:00"
+        - "11:00:00"
+      Wed:
+        - "09:25:00"
+        - "23:30:00"
+      Thu:
+        - "11:25:00"
+        - "12:00:00"
+      Fri:
+        - "15:30:00"
+        - "16:00:00"
