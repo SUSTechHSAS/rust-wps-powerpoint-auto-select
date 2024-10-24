@@ -2,10 +2,13 @@
 name = "rust-wps-powerpoint-auto-select"
 version = "0.1.0"
 edition = "2021"
+build = "src/build.rs"
 
 [dependencies]
 yaml-rust2 = "0.9"
 chrono = "0.4.38"
+
+[build-dependencies]
 winres = "*"
 
 [package.metadata.sprinter.windows]
