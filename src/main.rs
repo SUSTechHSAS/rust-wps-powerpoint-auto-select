@@ -5,10 +5,15 @@ use std::fs;
 use std::path::{Path};
 use yaml_rust2::{YamlLoader};
 use chrono::prelude::*;
+use winres;
 
 // maybe serde_yaml
 
 fn main() {
+    let mut res = winres::WindowsResource::new();
+    res.set_icon("res/method-draw-image.ico");
+    res.compile().unwrap();
+
     start();
 }
 
